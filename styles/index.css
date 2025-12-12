@@ -1,0 +1,150 @@
+:root {
+  --color-dark-overlay-0: #6C7086;
+  --color-dark-primary: #1E1E2E;
+  --color-dark-surface-0: #313244;
+  --color-dark-text: #CDD6F4;
+  --color-light-overlay-0: #9CA0B0;
+  --color-light-primary: #EFF1F5;
+  --color-light-surface-0: #CCD0DA;
+  --color-light-text: #4C4F69;
+}
+
+
+body {
+  margin: 0;
+  overflow-x: clip;
+
+  &[theme="dark"] {
+    background-color: var(--color-dark-primary);
+    
+    > #header {
+      background-color: var(--color-dark-surface-0);
+      
+      > #container-title {
+        > #title {
+          color: var(--color-dark-text);
+        }
+      }
+
+      > #container-controls {
+        > #container-theme-control {
+          > #theme-toggle-button {
+            background-color: black;
+            border-color: var(--color-dark-overlay-0);
+
+            > #head-switch {
+              background-color: var(--color-dark-overlay-0);
+            }
+          }
+          
+          > .theme {
+            color: var(--color-dark-text);
+          }
+        }
+      }
+    }
+  }
+
+  &[theme="light"] {
+    background-color: var(--color-light-primary);
+
+    > #header {
+      background-color: var(--color-light-surface-0);
+
+      > #container-title {
+        > #title {
+          color: var(--color-light-text);
+        }
+      }
+
+      > #container-controls {
+        > #container-theme-control {
+          > #theme-toggle-button {
+            background-color: white;
+            border-color: var(--color-light-overlay-0);
+
+            > #head-switch {
+              background-color: var(--color-light-overlay-0);
+              transform: translateX(-100%);
+            }
+          }
+          
+          > .theme {
+            color: var(--color-light-text);
+          }
+        }
+      }
+    }
+  }
+}
+
+
+#header {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  padding: 0.5em 1em;
+  position: sticky;
+  top: 0;
+  width: 100vw;
+
+  > #container-title {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    gap: 0.25em;
+
+    > img {
+      max-width: 100%;
+      width: 2em;
+    }
+    
+    > #title {
+      font-family: arial;
+      font-size: 1.25em;
+      font-weight: bold;
+    }
+  }
+
+  > #container-controls {
+    display: flex;
+    flex-direction: row;
+
+    > #container-theme-control {
+      align-items: center;
+      display: flex;
+      flex-direction: row;
+      gap: 0.5em;
+
+      > .theme {
+        font-family: arial;
+      }
+
+      > #theme-toggle-button {
+        background-color: inherit;
+        border: 2px solid;
+        border-radius: 0.75em;
+        box-sizing: border-box;
+        cursor: pointer;
+        height: 1.5em;
+        padding: 0;
+        width: 3em;
+        
+        > #head-switch {
+          box-sizing: border-box;
+          border: inherit;
+          border-radius: inherit;
+          height: 100%;
+          justify-self: end;
+          padding: 0;
+          position: relative;
+          top: 0;
+          transition: 0.25s ease-in-out;
+          width: 50%;
+        }
+      }
+    }
+  }
+}
