@@ -1,12 +1,18 @@
 :root {
   --color-dark-overlay-0: #6C7086;
   --color-dark-primary: #1E1E2E;
+  --color-dark-subtext-0: #A6ADC8;
   --color-dark-surface-0: #313244;
   --color-dark-text: #CDD6F4;
   --color-light-overlay-0: #9CA0B0;
   --color-light-primary: #EFF1F5;
+  --color-light-subtext-0: #6C6F85;
   --color-light-surface-0: #CCD0DA;
   --color-light-text: #4C4F69;
+  --cursor-dark: url('/assets/cursor_dark.png');
+  --cursor-light: url('/assets/cursor_light.png');
+  --pointer-dark: url('/assets/pointer_dark.png');
+  --pointer-light: url('/assets/pointer_light.png');
 }
 
 
@@ -16,8 +22,9 @@ body {
 
   &[theme="dark"] {
     background-color: var(--color-dark-primary);
+    cursor: var(--cursor-light), auto;
     
-    > #header {
+    > header {
       background-color: var(--color-dark-surface-0);
       
       > #container-title {
@@ -28,6 +35,10 @@ body {
 
       > #container-controls {
         > #container-theme-control {
+          &:hover, #theme-toggle-button:hover {
+            cursor: var(--pointer-light), auto;
+          }
+
           > #theme-toggle-button {
             background-color: black;
             border-color: var(--color-dark-overlay-0);
@@ -43,12 +54,31 @@ body {
         }
       }
     }
+
+    > main {
+      > #container-cover {
+        > #container-introduction {
+          > #title {
+            color: var(--color-dark-text);
+          }
+
+          > p {
+            color: var(--color-dark-subtext-0);
+          }
+        }
+        
+        > #cover-image {
+          background-image: url('/assets/cat_light.png');
+        }
+      }
+    }
   }
 
   &[theme="light"] {
     background-color: var(--color-light-primary);
+    cursor: var(--cursor-dark), auto;
 
-    > #header {
+    > header {
       background-color: var(--color-light-surface-0);
 
       > #container-title {
@@ -59,6 +89,10 @@ body {
 
       > #container-controls {
         > #container-theme-control {
+          &:hover, #theme-toggle-button:hover {
+            cursor: var(--pointer-dark), auto;
+          }
+          
           > #theme-toggle-button {
             background-color: white;
             border-color: var(--color-light-overlay-0);
@@ -75,11 +109,29 @@ body {
         }
       }
     }
+
+    > main {
+      > #container-cover {
+        > #container-introduction {
+          > #title {
+            color: var(--color-light-text);
+          }
+
+          > p {
+            color: var(--color-light-subtext-0);
+          }
+        }
+        
+        > #cover-image {
+          background-image: url('/assets/cat_dark.png');
+        }
+      }
+    }
   }
 }
 
 
-#header {
+header {
   box-sizing: border-box;
   display: flex;
   flex-direction: row;
@@ -145,6 +197,48 @@ body {
           width: 50%;
         }
       }
+    }
+  }
+}
+
+
+main {
+  > #container-cover {
+    aspect-ratio: 21 / 9;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    max-height: 50vh;
+    width: 100vw;
+
+    > #container-introduction {
+      align-content: center;
+      align-self: center;
+      height: 67%;
+      width: 33%;
+
+      > #title {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        font-size: 3em;
+        font-weight: 800;
+      }
+      
+      > p {
+        font-family: arial;
+        font-size: 0.9em;
+        font-style: italic;
+        margin: 0;
+        padding: 0;
+      }
+    }
+    
+    > #cover-image {
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+      height: 100%;
+      width: 45%;
     }
   }
 }
