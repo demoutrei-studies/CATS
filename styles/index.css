@@ -154,7 +154,7 @@ header {
     }
     
     > #title {
-      font-family: arial;
+      font-family: "Segoe UI", Arial;
       font-size: 1.25em;
       font-weight: bold;
     }
@@ -219,7 +219,7 @@ main {
       width: 33%;
 
       > #title {
-        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        font-family: "Segoe UI", Helvetica, Arial, sans-serif;
         font-size: 3em;
         font-weight: 800;
       }
