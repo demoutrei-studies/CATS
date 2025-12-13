@@ -1,4 +1,5 @@
 :root {
+  --dark-crust: #11111B;
   --dark-cursor: url('../assets/dark/cursor.cur');
   --dark-mantle: #181825;
   --dark-mauve: #CBA6F7;
@@ -9,9 +10,10 @@
   --dark-surface-0: #313244;
   --dark-surface-1: #45475A;
   --dark-text: #CDD6F4;
+  --light-crust: #DCE0E8;
+  --light-cursor: url('../assets/light/cursor.cur');
   --light-mantle: #E6E9EF;
   --light-mauve: #8839EF;
-  --light-cursor: url('../assets/light/cursor.cur');
   --light-overlay-0: #9CA0B0;
   --light-pointer: url('../assets/light/pointer.cur');
   --light-primary: #EFF1F5;
@@ -84,6 +86,10 @@ body {
     > main {
       scrollbar-width: none;
       
+      > hr {
+        border-color: var(--dark-crust);
+      }
+      
       .section {
         > .title {
           color: var(--dark-text);
@@ -132,6 +138,12 @@ body {
             border: 2px solid;
             border-color: var(--dark-overlay-0);
           }
+        }
+      }
+
+      > #container-quotes {
+        > blockquote {
+          color: var(--dark-text);
         }
       }
     }
@@ -196,6 +208,10 @@ body {
     > main {
       scrollbar-width: none;
       
+      > hr {
+        border-color: var(--light-crust);
+      }
+      
       .section {
         > .title {
           color: var(--light-text);
@@ -244,6 +260,12 @@ body {
             border: 2px solid;
             border-color: var(--light-overlay-0);
           }
+        }
+      }
+
+      > #container-quotes {
+        > blockquote {
+          color: var(--light-text);
         }
       }
     }
@@ -408,6 +430,11 @@ main {
   height: 100vh;
   overflow-x: clip;
   overflow-y: auto;
+
+  > hr {
+    border-style: solid;
+    width: 75vw;
+  }
   
   > #container-cover {
     aspect-ratio: 21 / 9;
@@ -533,6 +560,29 @@ main {
           visibility: hidden;
           z-index: 2;
         }
+      }
+    }
+  }
+
+  > #container-quotes {
+    padding: 0.5em 1em;
+
+    > blockquote {
+      font-family: "Sugoe UI";
+      text-align: center;
+
+      > .quotation-mark {
+        font-size: 2em;
+        font-weight: bold;
+      }
+
+      > .quote {
+        font-size: 1.2em;
+      }
+
+      > .author {
+        font-size: 0.9em;
+        font-style: italic;
       }
     }
   }
