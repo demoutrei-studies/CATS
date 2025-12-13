@@ -10,7 +10,7 @@ async function fetchBreeds() {
 
 
 function homePage() {
-  window.location.href = `index.html?theme=${body.getAttribute("theme")}`;
+  window.location.href = `./?theme=${body.getAttribute("theme")}`;
 }
 
 
