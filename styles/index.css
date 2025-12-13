@@ -9,10 +9,10 @@
   --color-light-subtext-0: #6C6F85;
   --color-light-surface-0: #CCD0DA;
   --color-light-text: #4C4F69;
-  --cursor-dark: url('/assets/cursor_dark.png');
-  --cursor-light: url('/assets/cursor_light.png');
-  --pointer-dark: url('/assets/pointer_dark.png');
-  --pointer-light: url('/assets/pointer_light.png');
+  --cursor-dark: url('/assets/dark/cursor.png');
+  --cursor-light: url('/assets/light/cursor.png');
+  --pointer-dark: url('/assets/dark/pointer.png');
+  --pointer-light: url('/assets/light/pointer.png');
 }
 
 
@@ -68,7 +68,7 @@ body {
         }
         
         > #cover-image {
-          background-image: url('/assets/cat_light.png');
+          background-image: url('/assets/light/cat.png');
         }
       }
     }
@@ -123,7 +123,7 @@ body {
         }
         
         > #cover-image {
-          background-image: url('/assets/cat_dark.png');
+          background-image: url('/assets/dark/cat.png');
         }
       }
     }
