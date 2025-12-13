@@ -11,7 +11,7 @@
   --dark-text: #CDD6F4;
   --light-mantle: #E6E9EF;
   --light-mauve: #8839EF;
-  --light-cursor: url('//assets/light/cursor.cur');
+  --light-cursor: url('/assets/light/cursor.cur');
   --light-overlay-0: #9CA0B0;
   --light-pointer: url('/assets/light/pointer.cur');
   --light-primary: #EFF1F5;
@@ -114,7 +114,7 @@ body {
         }
         
         > #cover-image {
-          background-image: url('/assets/light/cat.png');
+          background-image: url('assets/light/cat.png');
         }
       }
 
@@ -217,7 +217,7 @@ body {
         }
         
         > #cover-image {
-          background-image: url("/assets/dark/cat.png");
+          background-image: url("assets/dark/cat.png");
         }
       }
 
