@@ -50,7 +50,7 @@ function breedsCarousel() {
 
 
 function homePage() {
-  window.location.href = `/index.html?theme=${body.getAttribute("theme")}`;
+  window.location.href = `index.html?theme=${body.getAttribute("theme")}`;
 }
 
 
