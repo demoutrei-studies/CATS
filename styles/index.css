@@ -494,8 +494,10 @@ main {
       animation: scroll 175s linear infinite;
       display: flex;
       flex-direction: row;
-      overflow: hidden;
       gap: 1em;
+      list-style-type: none;
+      overflow: hidden;
+      padding: 0;
       width: fit-content;
 
       > .card {
