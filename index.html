@@ -12,13 +12,25 @@
         <img src="./assets/favicon.png">
         <span id="title">CATS</span>
       </div>
-      <div id="container-controls">
-        <div id="container-theme-control">
-          <div class="theme">Light</div>
-          <button id="theme-toggle-button" onclick="toggleTheme();">
-            <div id="head-switch"></div>
-          </button>
-          <div class="theme">Dark</div>
+      <div id="container-content">
+        <nav id="navigation-bar">
+          <ul>
+            <li id="navigation-breeds" tabindex="-1">
+              <span class="name">Breeds</span>
+              <div id="container-navigation-breeds" class="container-subnav">
+                <ul id="breeds-list"></ul>
+              </div>
+            </li>
+          </ul>
+        </nav>
+        <div id="container-controls">
+          <div id="container-theme-control">
+            <div class="theme">Light</div>
+            <button id="theme-toggle-button" onclick="toggleTheme();">
+              <div id="head-switch"></div>
+            </button>
+            <div class="theme">Dark</div>
+          </div>
         </div>
       </div>
     </header>
