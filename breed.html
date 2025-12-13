@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="./styles/breed.css">
+    <title></title>
+  </head>
+  <body theme="dark">
+    <header>
+      <div id="container-title" onclick="homePage();">
+        <img src="./assets/favicon.png">
+        <span id="title">CATS</span>
+      </div>
+      <div id="container-content">
+        <nav id="navigation-bar">
+          <ul>
+            <li id="navigation-breeds" tabindex="-1">
+              <span class="name">Breeds</span>
+              <div id="container-navigation-breeds" class="container-subnav">
+                <ul id="breeds-list"></ul>
+              </div>
+            </li>
+          </ul>
+        </nav>
+        <div id="container-controls">
+          <div id="container-theme-control">
+            <div class="theme">Light</div>
+            <button id="theme-toggle-button" onclick="toggleTheme();">
+              <div id="head-switch"></div>
+            </button>
+            <div class="theme">Dark</div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <script src="./scripts/breed.js"></script>
+  </body>
+</html>
