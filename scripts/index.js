@@ -1,6 +1,8 @@
+const body = document.querySelector("body[theme]");
 const breedsList = document.querySelector("#breeds-list");
 const carousel = document.querySelector("#carousel");
 const themeToggleButton = document.querySelector("#theme-toggle-button");
+const urlParams = new URLSearchParams(window.location.search);
 
 
 async function fetchBreeds() {
@@ -10,7 +12,6 @@ async function fetchBreeds() {
 
 
 function toggleTheme() {
-  const body = document.querySelector("body[theme]");
   if (body.getAttribute("theme") == "dark") {
     body.setAttribute("theme", "light");
   } else {
@@ -44,6 +45,10 @@ function breedsCarousel() {
 
 
 function setupHook() {
+  const themeParam = urlParams.get("theme");
+  if ((themeParam != null) && ["dark", "light"].includes(themeParam.toString().toLowerCase())) {
+    body.setAttribute("theme", urlParams.get("theme").toLowerCase());
+  }
   listBreeds();
   breedsCarousel();
 }
