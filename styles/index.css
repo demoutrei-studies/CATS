@@ -1,69 +1,93 @@
 :root {
-  --color-dark-overlay-0: #6C7086;
-  --color-dark-primary: #1E1E2E;
-  --color-dark-subtext-0: #A6ADC8;
-  --color-dark-surface-0: #313244;
-  --color-dark-text: #CDD6F4;
-  --color-light-overlay-0: #9CA0B0;
-  --color-light-primary: #EFF1F5;
-  --color-light-subtext-0: #6C6F85;
-  --color-light-surface-0: #CCD0DA;
-  --color-light-text: #4C4F69;
-  --cursor-dark: url('/assets/dark/cursor.png');
-  --cursor-light: url('/assets/light/cursor.png');
-  --pointer-dark: url('/assets/dark/pointer.png');
-  --pointer-light: url('/assets/light/pointer.png');
+  --dark-cursor: url('/assets/dark/cursor.png');
+  --dark-mantle: #181825;
+  --dark-mauve: #CBA6F7;
+  --dark-overlay-0: #6C7086;
+  --dark-pointer: url('/assets/dark/pointer.png');
+  --dark-primary: #1E1E2E;
+  --dark-subtext-0: #A6ADC8;
+  --dark-surface-0: #313244;
+  --dark-text: #CDD6F4;
+  --light-mantle: #E6E9EF;
+  --light-mauve: #8839EF;
+  --light-cursor: url('/assets/light/cursor.png');
+  --light-overlay-0: #9CA0B0;
+  --light-pointer: url('/assets/light/pointer.png');
+  --light-primary: #EFF1F5;
+  --light-subtext-0: #6C6F85;
+  --light-surface-0: #CCD0DA;
+  --light-text: #4C4F69;
 }
 
 
 body {
   margin: 0;
-  overflow-x: clip;
+  overflow: clip;
 
   &[theme="dark"] {
-    background-color: var(--color-dark-primary);
-    cursor: var(--cursor-light), auto;
+    background-color: var(--dark-primary);
+    cursor: var(--light-cursor), auto;
     
     > header {
-      background-color: var(--color-dark-surface-0);
+      background-color: var(--dark-surface-0);
       
       > #container-title {
         > #title {
-          color: var(--color-dark-text);
+          color: var(--dark-text);
         }
       }
 
       > #container-controls {
         > #container-theme-control {
           &:hover, #theme-toggle-button:hover {
-            cursor: var(--pointer-light), auto;
+            cursor: var(--light-pointer), auto;
           }
 
           > #theme-toggle-button {
             background-color: black;
-            border-color: var(--color-dark-overlay-0);
+            border-color: var(--dark-overlay-0);
 
             > #head-switch {
-              background-color: var(--color-dark-overlay-0);
+              background-color: var(--dark-overlay-0);
             }
           }
           
           > .theme {
-            color: var(--color-dark-text);
+            color: var(--dark-text);
           }
         }
       }
     }
 
     > main {
+      scrollbar-width: none;
+      
+      .section {
+        > .title {
+          color: var(--dark-text);
+
+          &:hover > .hook {
+            cursor: var(--light-pointer), auto;
+          }
+        }
+
+        a {
+          color: var(--dark-mauve);
+
+          &:hover {
+            cursor: var(--light-pointer), auto;
+          }
+        }
+      }
+      
       > #container-cover {
         > #container-introduction {
           > #title {
-            color: var(--color-dark-text);
+            color: var(--dark-text);
           }
 
           > p {
-            color: var(--color-dark-subtext-0);
+            color: var(--dark-subtext-0);
           }
         }
         
@@ -71,59 +95,95 @@ body {
           background-image: url('/assets/light/cat.png');
         }
       }
+
+      > #container-about {
+        > #about {
+          > p {
+            color: var(--dark-subtext-0);
+          }
+        }
+      }
     }
   }
 
   &[theme="light"] {
-    background-color: var(--color-light-primary);
-    cursor: var(--cursor-dark), auto;
+    background-color: var(--light-primary);
+    cursor: var(--dark-cursor), auto;
 
     > header {
-      background-color: var(--color-light-surface-0);
+      background-color: var(--light-surface-0);
 
       > #container-title {
         > #title {
-          color: var(--color-light-text);
+          color: var(--light-text);
         }
       }
 
       > #container-controls {
         > #container-theme-control {
           &:hover, #theme-toggle-button:hover {
-            cursor: var(--pointer-dark), auto;
+            cursor: var(--dark-pointer), auto;
           }
           
           > #theme-toggle-button {
             background-color: white;
-            border-color: var(--color-light-overlay-0);
+            border-color: var(--light-overlay-0);
 
             > #head-switch {
-              background-color: var(--color-light-overlay-0);
+              background-color: var(--light-overlay-0);
               transform: translateX(-100%);
             }
           }
           
           > .theme {
-            color: var(--color-light-text);
+            color: var(--light-text);
           }
         }
       }
     }
 
     > main {
+      scrollbar-width: none;
+      
+      .section {
+        > .title {
+          color: var(--light-text);
+          
+          &:hover > .hook {
+            cursor: var(--dark-pointer), auto;
+          }
+        }
+
+        a {
+          color: var(--light-mauve);
+
+          &:hover {
+            cursor: var(--dark-pointer), auto;
+          }
+        }
+      }
+      
       > #container-cover {
         > #container-introduction {
           > #title {
-            color: var(--color-light-text);
+            color: var(--light-text);
           }
 
           > p {
-            color: var(--color-light-subtext-0);
+            color: var(--light-subtext-0);
           }
         }
         
         > #cover-image {
           background-image: url('/assets/dark/cat.png');
+        }
+      }
+
+      > #container-about {
+        > #about {
+          > p {
+            color: var(--light-subtext-0);
+          }
         }
       }
     }
@@ -141,6 +201,7 @@ header {
   position: sticky;
   top: 0;
   width: 100vw;
+  z-index: 1;
 
   > #container-title {
     align-items: center;
@@ -203,6 +264,10 @@ header {
 
 
 main {
+  height: 100vh;
+  overflow-x: clip;
+  overflow-y: auto;
+  
   > #container-cover {
     aspect-ratio: 21 / 9;
     box-sizing: border-box;
@@ -239,6 +304,42 @@ main {
       background-size: contain;
       height: 100%;
       width: 45%;
+    }
+  }
+
+  .section {
+    > .title {
+      font-family: "Segoe UI";
+      font-size: 1.5em;
+      font-weight: 900;
+
+      &:hover > .hook {
+        visibility: visible;
+      }
+
+      > .hook {
+        color: inherit;
+        text-decoration: none;
+        visibility: hidden;
+      }
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+  }
+  
+  > #container-about {
+    > #about {
+      justify-self: center;
+      width: 80%;
+      
+      > p {
+        font-family: sans-serif;
+        font-size: 0.9em;
+        text-indent: 2em;
+      }
     }
   }
 }
