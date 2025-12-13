@@ -1,4 +1,5 @@
 const breedsList = document.querySelector("#breeds-list");
+const carousel = document.querySelector("#carousel");
 const themeToggleButton = document.querySelector("#theme-toggle-button");
 
 
@@ -29,8 +30,22 @@ function listBreeds() {
 }
 
 
+function breedsCarousel() {
+  carousel.innerHTML = "";
+  fetchBreeds().then(data => {
+    for (let i = 0; i < 2; i++) {
+      for (const breed in data) {
+        const card = `<div class="card"><img src="../assets/cats/${breed}.png" title="${breed}"><span class="overlay">${breed}</span></div>`;
+        carousel.insertAdjacentHTML("beforeend", card);
+      }
+    }
+  })
+}
+
+
 function setupHook() {
   listBreeds();
+  breedsCarousel();
 }
 
 

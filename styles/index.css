@@ -125,6 +125,15 @@ body {
           }
         }
       }
+
+      > #container-carousel {
+        > #carousel {
+          > .card {
+            border: 2px solid;
+            border-color: var(--dark-overlay-0);
+          }
+        }
+      }
     }
   }
 
@@ -225,6 +234,15 @@ body {
         > #about {
           > p {
             color: var(--light-subtext-0);
+          }
+        }
+      }
+
+      > #container-carousel {
+        > #carousel {
+          > .card {
+            border: 2px solid;
+            border-color: var(--light-overlay-0);
           }
         }
       }
@@ -464,5 +482,66 @@ main {
         text-indent: 2em;
       }
     }
+  }
+
+  > #container-carousel {
+    justify-self: center;
+    padding: 0.5em 1em;
+    overflow: clip;
+    width: 80vw;
+    
+    > #carousel {
+      animation: scroll 175s linear infinite;
+      display: flex;
+      flex-direction: row;
+      overflow: hidden;
+      gap: 1em;
+      width: fit-content;
+
+      > .card {
+        background-color: black;
+        border-radius: 20px;
+        box-sizing: border-box;
+        display: flex;
+        overflow: clip;
+        position: relative;
+        width: fit-content;
+        z-index: 1;
+
+        &:hover > .overlay {
+          visibility: visible;
+        }
+
+        &:hover > img {
+          opacity: 0.25;
+        }
+
+        > img {
+          height: 7em;
+        }
+
+        > .overlay {
+          color: white;
+          font-family: Arial;
+          left: 50%;
+          position: absolute;
+          text-align: center;
+          top: 50%;
+          transform: translate(-50%, -50%);
+          visibility: hidden;
+          z-index: 2;
+        }
+      }
+    }
+  }
+}
+
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
   }
 }
