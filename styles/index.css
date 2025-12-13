@@ -610,6 +610,7 @@ main {
   }
 
   > #container-credits {
+    font-family: arial;
     padding: 1em 2em;
     text-align: center;
     
