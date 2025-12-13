@@ -1,9 +1,9 @@
 :root {
-  --dark-cursor: url('/assets/dark/cursor.cur');
+  --dark-cursor: url('./assets/dark/cursor.cur');
   --dark-mantle: #181825;
   --dark-mauve: #CBA6F7;
   --dark-overlay-0: #6C7086;
-  --dark-pointer: url('/assets/dark/pointer.cur');
+  --dark-pointer: url('./assets/dark/pointer.cur');
   --dark-primary: #1E1E2E;
   --dark-subtext-0: #A6ADC8;
   --dark-surface-0: #313244;
@@ -11,9 +11,9 @@
   --dark-text: #CDD6F4;
   --light-mantle: #E6E9EF;
   --light-mauve: #8839EF;
-  --light-cursor: url('/assets/light/cursor.cur');
+  --light-cursor: url('./assets/light/cursor.cur');
   --light-overlay-0: #9CA0B0;
-  --light-pointer: url('/assets/light/pointer.cur');
+  --light-pointer: url('./assets/light/pointer.cur');
   --light-primary: #EFF1F5;
   --light-subtext-0: #6C6F85;
   --light-surface-0: #CCD0DA;
@@ -114,7 +114,7 @@ body {
         }
         
         > #cover-image {
-          background-image: url('assets/light/cat.png');
+          background-image: url('./assets/light/cat.png');
         }
       }
 
@@ -217,7 +217,7 @@ body {
         }
         
         > #cover-image {
-          background-image: url("assets/dark/cat.png");
+          background-image: url("/assets/dark/cat.png");
         }
       }
 
