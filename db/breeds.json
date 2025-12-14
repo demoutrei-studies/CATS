@@ -1,7 +1,19 @@
 {
-  "Abyssinian": {},
-  "Aegean": {},
-  "Alpine Lynx": {},
+  "Abyssinian": {
+    "description": "The <b>Abyssinian</b> is a breed of cat with a distinctive \"ticked\" tabby coat, in which individual hairs are banded with different colours. They are also known simply as <b>Abys</b>.",
+    "common_nicknames": ["Abys"],
+    "origin": "Indian Ocean, Southeast Asia"
+  },
+  "Aegean": {
+    "description": "<b>Aegean</b> cats are a naturally occurring landrace of domestic cat originating from the Cycladic Islands of Greece and western Turkey. It is considered a natural cat, developing without human interference. Development of the Aegean cat as a formal breed began in the early 1990s by breeders in the fledgling Greek cat fancy, but the variety has yet to be recognized by any major fancier and breeder organization. It is considered to be the only native Greek variety of cat.",
+    "origin": "Greece",
+    "notes": "Occurs naturally throughout Greece and Turkey, originates from the Cycladic Islands"
+  },
+  "Alpine Lynx": {
+    "description": "The <b>Alpine Lynx</b> is short-tailed cat breed that can have either curled or straight ears. They may be either short- or long-haired, and may have tufted toes, and whose back legs are longer than their front legs. It was developed from a cross between a Highlander and a barned Russian White.",
+    "common_nicknames": ["Lynx of the Alps", "Alpine cat"],
+    "origin": "Alps, Europe"
+  },
   "American Bobtail": {},
   "American Curl": {},
   "American Lynx": {},

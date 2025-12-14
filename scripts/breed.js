@@ -1,6 +1,35 @@
 const body = document.querySelector("body[theme]");
+const breedDescriptionElement = document.querySelector("#breed-description");
 const breedsList = document.querySelector("#breeds-list");
+const breedNameElement = document.querySelector("#breed-name");
+const image = document.querySelector("#image");
+const tableContent = document.querySelector("#table-content");
 const urlParams = new URLSearchParams(window.location.search);
+
+
+async function displayInformation(breedName) {
+  const breeds = await fetchBreeds();
+  const breed = breeds[breedName];
+  breedNameElement.textContent = breedName;
+  breedDescriptionElement.innerHTML = breed["description"]? breed["description"] : "<i>No description provided.</i>";
+  if (breed["common_nicknames"] != undefined) {
+    const commonNicknamesTemplate = `<tr><th>Common Nicknames</th><td>${breed["common_nicknames"].join(", ")}</td></tr>`;
+    tableContent.insertAdjacentHTML("beforeend", commonNicknamesTemplate);
+  }
+  if (breed["origin"] != undefined) {
+    const originTemplate = `<tr><th>Origin</th><td>${breed["origin"]}</td></tr>`;
+    tableContent.insertAdjacentHTML("beforeend", originTemplate);
+  }
+  if (breed["notes"] != undefined) {
+    const notesTemplate = `<tr><th>Notes</th><td>${breed["notes"]}</td></tr>`;
+    tableContent.insertAdjacentHTML("beforeend", notesTemplate);
+  }
+}
+
+
+function displayImage(breedName) {
+  image.src = `./assets/cats/${breedName}.png`;
+}
 
 
 async function fetchBreeds() {
@@ -51,6 +80,8 @@ async function setupHook() {
     body.setAttribute("theme", urlParams.get("theme").toLowerCase());
   }
   listBreeds();
+  displayImage(breedName);
+  displayInformation(breedName);
 }
 
 

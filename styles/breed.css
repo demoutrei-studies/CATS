@@ -84,6 +84,38 @@ body {
         }
       }
     }
+
+    > main {
+      > #container-information {
+        background-color: var(--dark-surface-0);
+
+        > #container-content {
+          > #container-title {
+            color: var(--dark-text);
+          }
+
+          > #container-description {
+            color: var(--dark-subtext-0);
+          }
+
+          > #container-data {
+            > #table-data {
+              > #table-content {
+                > tr {
+                  > th {
+                    color: var(--dark-subtext-0);
+                  }
+
+                  > td {
+                    color: var(--dark-text);
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
   }
 
   &[theme="light"] {
@@ -136,6 +168,38 @@ body {
             
             > .theme {
               color: var(--light-text);
+            }
+          }
+        }
+      }
+    }
+
+    > main {
+      > #container-information {
+        background-color: var(--light-surface-0);
+
+        > #container-content {
+          > #container-title {
+            color: var(--light-text);
+          }
+
+          > #container-description {
+            color: var(--light-subtext-0);
+          }
+
+          > #container-data {
+            > #table-data {
+              > #table-content {
+                > tr {
+                  > th {
+                    color: var(--light-subtext-0);
+                  }
+
+                  > td {
+                    color: var(--light-text);
+                  }
+                }
+              }
             }
           }
         }
@@ -290,6 +354,89 @@ header {
             top: 0;
             transition: 0.25s ease-in-out;
             width: 50%;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+main {
+  align-items: center;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 90vw;
+  
+  > #container-information {
+    display: flex;
+    flex-direction: row;
+    border-radius: 18px;
+    height: 40vh;
+    max-width: 90vw;
+    overflow: clip;
+
+    > #image {
+      max-height: 100%;
+    }
+
+    > #container-content {
+      display: flex;
+      flex-direction: column;
+      max-height: 100%;
+      overflow-y: auto;
+      padding: 0.5em 1em;
+      scrollbar-width: none;
+
+      > #container-title {
+        > #breed-name {
+          font-family: "Segoe UI", arial;
+          font-size: 1.5em;
+          font-weight: 900;
+        }
+      }
+
+      > #container-description {
+        > #breed-description {
+          font-family: arial;
+          font-size: 0.9em;
+          margin: 0;
+          padding: 0.5em 0.5em;
+          text-indent: 2em;
+        }
+      }
+
+      > #container-data {
+        > #table-data {
+          border-collapse: collapse;
+          text-align: left;
+          width: 100%;
+
+          > #table-content {
+
+            > tr {
+              font-family: arial;
+              font-size: 0.8em;
+              
+              > th, td {
+                align-content: start;
+                padding: 0.25em 0.5em;
+              }
+              
+              > th {
+                max-width: 2.5em;
+              }
+
+              > td {
+                max-width: fit-content;
+              }
+            }
           }
         }
       }
