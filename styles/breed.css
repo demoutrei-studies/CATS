@@ -471,8 +471,14 @@ main {
     > #container-information {
       flex-direction: column;
       height: max-content;
+      max-height: 85vh;
       width: 60vw;
 
+      > #image {
+        max-height: 50vh;
+        max-width: 100%;
+      }
+      
       > #container-content {
         max-width: 100%;
       }
