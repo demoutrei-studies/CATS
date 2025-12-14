@@ -54,6 +54,11 @@ async function fetchBreeds() {
 }
 
 
+function goToAbout() {
+  window.location.href = `./?theme=${body.getAttribute("theme")}#about`;
+}
+
+
 function homePage() {
   window.location.href = `./?theme=${body.getAttribute("theme")}`;
 }

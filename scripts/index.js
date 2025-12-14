@@ -56,6 +56,7 @@ function homePage() {
 
 function setupHook() {
   const themeParam = urlParams.get("theme");
+  console.log(themeParam);
   if ((themeParam != null) && ["dark", "light"].includes(themeParam.toString().toLowerCase())) {
     body.setAttribute("theme", urlParams.get("theme").toLowerCase());
   }
