@@ -398,7 +398,7 @@ main {
     display: flex;
     flex-direction: row;
     border-radius: 18px;
-    height: 40vh;
+    height: 20em;
     max-width: 90vw;
     overflow: clip;
 
@@ -460,6 +460,21 @@ main {
             }
           }
         }
+      }
+    }
+  }
+}
+
+
+@media screen and (width <= 900px) {
+  main {
+    > #container-information {
+      flex-direction: column;
+      height: max-content;
+      width: 60vw;
+
+      > #container-content {
+        max-width: 100%;
       }
     }
   }
