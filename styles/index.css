@@ -394,7 +394,7 @@ header {
               display: flex;
               flex-direction: row;
               flex-wrap: wrap;
-              gap: 0.25em;
+              gap: 0.67em;
               list-style-type: none;
               padding: 0;
               width: calc(100vw - 2em);
