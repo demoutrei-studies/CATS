@@ -434,7 +434,7 @@ main {
               }
 
               > td {
-                max-width: fit-content;
+                max-width: 9.5em;
               }
             }
           }

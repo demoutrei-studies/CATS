@@ -20,6 +20,22 @@ async function displayInformation(breedName) {
     const originTemplate = `<tr><th>Origin</th><td>${breed["origin"]}</td></tr>`;
     tableContent.insertAdjacentHTML("beforeend", originTemplate);
   }
+  if (breed["alternative_names"] != undefined) {
+    const alternativeNamesTemplate = `<tr><th>Alternative Names</th><td>${breed["alternative_names"].join(", ")}</td></tr>`;
+    tableContent.insertAdjacentHTML("beforeend", alternativeNamesTemplate);
+  }
+  if (breed["foundation_bloodstock"] != undefined) {
+    const foundationBloodstockTemplate = `<tr><th>Foundation Bloodstock</th><td>${breed["foundation_bloodstock"]}</td></tr>`;
+    tableContent.insertAdjacentHTML("beforeend", foundationBloodstockTemplate);
+  }
+  if (breed["breed_status"] != undefined) {
+    const breedStatusTemplate = `<tr><th>Breed status</th><td>${breed["breed_status"]}</td></tr>`;
+    tableContent.insertAdjacentHTML("beforeend", breedStatusTemplate);
+  }
+  if (breed["variety_status"] != undefined) {
+    const varietyStatusTemplate = `<tr><th>Variety Status</th><td>${breed["variety_status"]}</td></tr>`;
+    tableContent.insertAdjacentHTML("beforeend", varietyStatusTemplate);
+  }
   if (breed["notes"] != undefined) {
     const notesTemplate = `<tr><th>Notes</th><td>${breed["notes"]}</td></tr>`;
     tableContent.insertAdjacentHTML("beforeend", notesTemplate);
