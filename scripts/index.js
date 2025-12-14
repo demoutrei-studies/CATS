@@ -41,7 +41,7 @@ function breedsCarousel() {
   fetchBreeds().then(data => {
     for (let i = 0; i < 2; i++) {
       for (const breed in data) {
-        const card = `<li class="card"><img src="./assets/cats/${breed}.png" title="${breed}"><span class="overlay">${breed}</span></li>`;
+        const card = `<li class="card" onclick="loadBreedPage('${breed}');"><img src="./assets/cats/${breed}.png" title="${breed}"><span class="overlay">${breed}</span></li>`;
         carousel.insertAdjacentHTML("beforeend", card);
       }
     }

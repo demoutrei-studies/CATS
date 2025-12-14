@@ -139,6 +139,10 @@ body {
           > .card {
             border: 2px solid;
             border-color: var(--dark-overlay-0);
+
+            &:hover {
+              cursor: var(--light-pointer), pointer;
+            }
           }
         }
       }
@@ -271,6 +275,10 @@ body {
           > .card {
             border: 2px solid;
             border-color: var(--light-overlay-0);
+
+            &:hover {
+              cursor: var(--dark-pointer), pointer;
+            }
           }
         }
       }
